@@ -3,7 +3,7 @@ import Input from "@/Components/Input";
 import Label from "@/Components/Label";
 import { Head, Link } from "@inertiajs/react";
 
-export default function () {
+export default function Login() {
     return (<>
         <Head title="Sign In" />
         <div className="mx-auto max-w-screen min-h-screen bg-black text-white md:px-10 px-3">
