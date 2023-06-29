@@ -1,3 +1,4 @@
+import { Link } from "@inertiajs/react";
 import { useState, useRef } from "react";
 
 export default function Topbar() {
@@ -30,9 +31,9 @@ export default function Topbar() {
                     </div>
                     <div className="bg-white rounded-2xl text-black font-medium flex flex-col gap-1 absolute z-[999] right-0 top-[80px] min-w-[180px] hidden overflow-hidden"
                         ref={dropDownTarget}>
-                        <a href="#!" className="transition-all hover:bg-sky-100 p-4">Dashboard</a>
+                        <Link href={route('prototype.dashboard')} className="transition-all hover:bg-sky-100 p-4">Dashboard</Link>
                         <a href="#!" className="transition-all hover:bg-sky-100 p-4">Settings</a>
-                        <a href="sign_in.html" className="transition-all hover:bg-sky-100 p-4">Sign Out</a>
+                        <Link href={route('prototype.login')} className="transition-all hover:bg-sky-100 p-4">Sign Out</Link>
                     </div>
                 </div>
             </div>
