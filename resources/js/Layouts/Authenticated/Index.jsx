@@ -1,11 +1,12 @@
 import Sidebar from "./Sidebar";
 import Topbar from "./Topbar";
 
-export default function Authenticated({ children, auth = {} }) {
+export default function Authenticated(props) {
+    const { children, auth = {} } = props;
     return (<>
         <div className="mx-auto max-w-screen hidden lg:block">
             {/* START: Sidebar */}
-            <Sidebar />
+            <Sidebar {...props} />
             {/* END: Sidebar */}
 
             {/* START: Content */}

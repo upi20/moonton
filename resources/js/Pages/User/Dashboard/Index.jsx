@@ -5,7 +5,8 @@ import { Head } from "@inertiajs/react";
 import Flickity from "react-flickity-component";
 
 
-export default function Dashboard({ auth, featuredMovies, movies }) {
+export default function Dashboard(props) {
+    const { featuredMovies, movies } = props;
     const flickityOption = {
         "cellAlign": "left",
         "contain": true,
@@ -16,7 +17,7 @@ export default function Dashboard({ auth, featuredMovies, movies }) {
         "draggable": ">1"
     };
 
-    return (<Authenticated auth={auth}>
+    return (<Authenticated {...props}>
         <Head>
             <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css" />
             <title>Dashboard</title>
