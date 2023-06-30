@@ -1,5 +1,8 @@
 import Sidebar from "./Sidebar";
 import Topbar from "./Topbar";
+import '/resources/css/app.css';
+import '/resources/css/input.css';
+import '/resources/css/button.css';
 
 export default function Authenticated(props) {
     const { children, auth = {} } = props;
