@@ -1,3 +1,12 @@
+// Route::get('/', function () {
+//     return Inertia::render('Welcome', [
+//         'canLogin' => Route::has('login'),
+//         'canRegister' => Route::has('register'),
+//         'laravelVersion' => Application::VERSION,
+//         'phpVersion' => PHP_VERSION,
+//     ]);
+// });
+
 import { Link, Head } from '@inertiajs/react';
 
 export default function Welcome({ auth, laravelVersion, phpVersion }) {

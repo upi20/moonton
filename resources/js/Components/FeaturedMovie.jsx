@@ -43,7 +43,7 @@ export default function FeaturedMovie({
                     <img src="/assets/icons/ic_play.svg" width="50" alt="" />
                 </div>
             </div>
-            <Link href={route('prototype.movie.detail', slug)} className="inset-0 absolute z-50" ></Link>
+            <Link href={route('dashboard.movie.show', slug)} className="inset-0 absolute z-50" ></Link>
         </div>
     );
 }
