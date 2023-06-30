@@ -20,6 +20,8 @@ use App\Http\Controllers\Admin\MovieController as AdminMovieController;
 |
 */
 
+Route::post('midtrans/notification', [SubscriptionPlanController::class, 'midtransCallback']);
+
 Route::get('/', function () {
     return Inertia::render('Auth/Login');
 });
