@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from "react";
 import PropTypes from "prop-types";
 
 Input.propTypes = {
-    type: PropTypes.oneOf(["text", "email", "password", "number", "file"]),
+    type: PropTypes.oneOf(["text", "email", "password", "number", "file", "url"]),
     name: PropTypes.string,
     value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
     // defaultValue: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
@@ -20,7 +20,7 @@ export default function Input({
     type = "text",
     name,
     value,
-    // defaultValue,
+    defaultValue,
     className,
     variant = "primary",
     autoComplete,
@@ -46,7 +46,7 @@ export default function Input({
                 type={type}
                 name={name}
                 value={value}
-                // defaultValue={defaultValue}
+                defaultValue={defaultValue}
                 className={`rounded-2xl bg-form-bg py-[13px] px-7 w-full ${isError ? "input-error" : ''} input-${variant} ${className}`}
                 ref={input}
                 autoComplete={autoComplete}
