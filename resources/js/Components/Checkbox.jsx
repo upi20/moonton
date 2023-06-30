@@ -1,12 +1,14 @@
-export default function Checkbox({ className = '', ...props }) {
+import React from 'react';
+
+export default function Checkbox({ name, value, handleChange, checked = false }) {
     return (
         <input
-            {...props}
             type="checkbox"
-            className={
-                'rounded dark:bg-gray-900 border-gray-300 dark:border-gray-700 text-indigo-600 shadow-sm focus:ring-indigo-500 dark:focus:ring-indigo-600 dark:focus:ring-offset-gray-800 ' +
-                className
-            }
+            name={name}
+            value={value}
+            className="rounded border-gray-300 text-indigo-600 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+            onChange={(e) => handleChange(e)}
+            defaultChecked={checked}
         />
     );
 }
